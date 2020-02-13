@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "d0254d8c-4e8d-49a0-8b43-a5359c1de79a",
+		"name": "DarkSky",
+		"description": "API Dark Sky",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Complet meteo ISEN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.darksky.net/forecast/e0f1f6291c16dd9d522e7aed11b10bd6/50.6339253,3.0485954?lang=fr&units=ca",
+					"protocol": "https",
+					"host": [
+						"api",
+						"darksky",
+						"net"
+					],
+					"path": [
+						"forecast",
+						"e0f1f6291c16dd9d522e7aed11b10bd6",
+						"50.6339253,3.0485954"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "fr"
+						},
+						{
+							"key": "units",
+							"value": "ca"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Complet meteo ISEN sans minutes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.darksky.net/forecast/e0f1f6291c16dd9d522e7aed11b10bd6/50.6339253,3.0485954?lang=fr&units=ca&exclude=minutely",
+					"protocol": "https",
+					"host": [
+						"api",
+						"darksky",
+						"net"
+					],
+					"path": [
+						"forecast",
+						"e0f1f6291c16dd9d522e7aed11b10bd6",
+						"50.6339253,3.0485954"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "fr"
+						},
+						{
+							"key": "units",
+							"value": "ca"
+						},
+						{
+							"key": "exclude",
+							"value": "minutely"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Heure par heure 7 jours",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.darksky.net/forecast/e0f1f6291c16dd9d522e7aed11b10bd6/50.6339253,3.0485954?lang=fr&units=ca&extend=hourly&exclude=minutely",
+					"protocol": "https",
+					"host": [
+						"api",
+						"darksky",
+						"net"
+					],
+					"path": [
+						"forecast",
+						"e0f1f6291c16dd9d522e7aed11b10bd6",
+						"50.6339253,3.0485954"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "fr"
+						},
+						{
+							"key": "units",
+							"value": "ca"
+						},
+						{
+							"key": "extend",
+							"value": "hourly"
+						},
+						{
+							"key": "exclude",
+							"value": "minutely"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
