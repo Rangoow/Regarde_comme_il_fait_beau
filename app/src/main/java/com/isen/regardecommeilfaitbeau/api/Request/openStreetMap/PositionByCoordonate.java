@@ -5,21 +5,14 @@ import com.isen.regardecommeilfaitbeau.typeData.Position;
 
 import java.lang.String;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.net.URLConnection;
-
-import javax.xml.parsers.DocumentBuilder;
 
 public class PositionByCoordonate {
 
@@ -37,11 +30,21 @@ public class PositionByCoordonate {
     private JSONObject json;
     private FileWriter file;
 
+    private Position completePosition;
+
     public PositionByCoordonate(Position pos){
         latitude = pos.getLatitude();
         longitude = pos.getLongitude();
         latitudeS = Double.toString(latitude);
         longitudeS = Double.toString(longitude);
+    }
+
+    public Position findPositionProperties() throws JSONException {
+        madeUrl();
+        doRequest();
+        getLocationProperties();
+        createPosition();
+        return completePosition;
     }
 
     public void madeUrl(){
@@ -60,7 +63,6 @@ public class PositionByCoordonate {
             connection.connect();
             InputStream inputStream = connection.getInputStream();
             String result = InputStreamOperations.InputStreamToString(inputStream);
-            System.out.println(result);
             json = new JSONObject(result);
             return true;
 
@@ -74,7 +76,6 @@ public class PositionByCoordonate {
         file = new FileWriter("searchByCoordonate.json");
         try{
             file.write(json.toString());
-            //System.out.println("chat");
             return true;
         } catch (IOException e) {
             e.printStackTrace();
@@ -83,11 +84,38 @@ public class PositionByCoordonate {
             try{
                 file.flush();
                 file.close();
-                //System.out.println("chien");
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
 
+    public void getLocationProperties() throws JSONException {
+        JSONObject adress = json.getJSONObject("address");
+        if(adress.has("city")){
+            cityName = adress.getString("city");
+        }else if(adress.has("town")){
+            cityName = adress.getString("town");
+        }
+
+        countryName = adress.getString("country");
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public void createPosition(){
+        completePosition = new Position(latitude, longitude);
+        completePosition.setName(cityName);
+        completePosition.setCountry(countryName);
+    }
+
+    public Position getPosition(){
+        return completePosition;
+    }
 }
