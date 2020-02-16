@@ -7,29 +7,60 @@
     android:background="#2196F3"
     android:orientation="vertical">
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout_id"
+        android:layout_width="393dp"
+        android:layout_height="49dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorColor="@color/btnColor"
+        app:tabTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/detailsTabItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detailsBtn" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tpdayTan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/todayBtn" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forecastBtn" />
+    </com.google.android.material.tabs.TabLayout>
+
+
     <TextView
         android:id="@+id/temperature"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_width="100dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/blogger"
         android:text="@string/temperatureTxt"
         android:textColor="@color/white"
-        android:textSize="72sp"
+        android:textSize="80sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout_id" />
 
     <TextView
         android:id="@+id/city"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/blogger"
         android:text="@string/cityTxt"
         android:textColor="@color/white"
-        android:textSize="36sp"
+        android:textSize="42sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,10 +70,11 @@
         android:id="@+id/weatherDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/blogger"
         android:text="@string/weatherDesc"
         android:textColor="@color/white"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,20 +82,20 @@
 
     <ImageView
         android:id="@+id/weatherDescriptionIcon"
-        android:layout_width="151dp"
-        android:layout_height="143dp"
+        android:layout_width="197dp"
+        android:layout_height="173dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/iconWeatherDesc"
+        android:src="@drawable/ic_wi_day_sunny"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weatherDescription"
-        tools:srcCompat="@drawable/ic_wi_day_sunny" />
+        app:layout_constraintTop_toBottomOf="@+id/weatherDescription" />
 
     <EditText
         android:id="@+id/cityInput"
-        android:layout_width="276dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="206dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="24dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
@@ -80,7 +112,7 @@
         android:id="@+id/refreshBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
         app:backgroundTint="@color/btnColor"
@@ -89,46 +121,23 @@
         app:layout_constraintStart_toEndOf="@+id/cityInput"
         app:srcCompat="@drawable/ic_refresh" />
 
-    <Button
-        android:id="@+id/dayDetailsBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/btnColor"
-        android:fontFamily="@font/blogger"
-        android:text="@string/detailsBtn"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/forecastBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/rounded_button"
-        android:backgroundTint="@color/btnColor"
-        android:fontFamily="@font/blogger"
-        android:text="@string/forecastBtn"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/tempUnit"
         android:layout_width="58dp"
         android:layout_height="36dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/blogger"
         android:text="@string/temperatureUnitTxt"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/temperature"
-        app:layout_constraintTop_toBottomOf="@+id/forecastBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout_id" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></androidx.viewpager.widget.ViewPager>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
