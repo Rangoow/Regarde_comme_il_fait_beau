@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">RegardeCommeIlFaitBeau</string>
+    <string name="app_name">Regarde Comme Il Fait Beau</string>
+    <string name="detailsBtn">Details</string>
+    <string name="todayBtn">Today</string>
+    <string name="forecastBtn">Forecast</string>
+    <string name="temperatureTxt">20</string>
+    <string name="temperatureUnitTxt">°C</string>
+    <string name="cityTxt">Lille</string>
+    <string name="weatherDesc">Sunny</string>
+    <string name="cityInputHint">Enter your city</string>
+    <string name="iconWeatherDesc">weather icon</string>
 </resources>

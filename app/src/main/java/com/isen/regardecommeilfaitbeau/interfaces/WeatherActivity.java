@@ -1,8 +1,10 @@
-package com.isen.regardecommeilfaitbeau;
+package com.isen.regardecommeilfaitbeau.interfaces;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.isen.regardecommeilfaitbeau.R;
 
 public class WeatherActivity extends AppCompatActivity {
 
