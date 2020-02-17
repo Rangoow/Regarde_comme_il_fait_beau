@@ -33,6 +33,7 @@ public class OpenStreetMapTest {
     public void urlIsCorrect() {
         testPositionByCoordonate.madeUrl();
         assertEquals("https://nominatim.openstreetmap.org/reverse?format=json&lat=50.72301&lon=2.73896", testPositionByCoordonate.getUrl());
+        assertEquals("http://api.timezonedb.com/v2.1/get-time-zone?key=F10IKI69VB1W&format=json&by=position&lat=50.72301&lng=2.73896", testPositionByCoordonate.getUrlSSTime());
     }
     @Test
     public void canDoRequest(){
@@ -52,15 +53,18 @@ public class OpenStreetMapTest {
         testPositionByCoordonate.getLocationProperties();
         assertEquals("Bailleul", testPositionByCoordonate.getCityName());
         assertEquals("France", testPositionByCoordonate.getCountryName());
+        assertEquals("Europe/Paris", testPositionByCoordonate.getTimeZone());
     }
     @Test
-    public void testGlobalFunction() throws JSONException {
+    public void testGlobalFunction() throws JSONException, InterruptedException {
+        Thread.sleep(1000);
         PositionByCoordonate coordonatePositionFinal = new PositionByCoordonate(position);
         Position finalPosition = coordonatePositionFinal.findPositionProperties();
         assertEquals(50.72301, finalPosition.getLatitude(), 0.0);
         assertEquals(2.73896, finalPosition.getLongitude(), 0.0);
         assertEquals("Bailleul", finalPosition.getName());
         assertEquals("France", finalPosition.getCountry());
+        assertEquals("Europe/Paris", finalPosition.getTimeZone());
     }
     @Test
     public void urlIsCorrectCity(){
@@ -75,6 +79,17 @@ public class OpenStreetMapTest {
         assertTrue(positionByCityName.doRequest());
     }
     @Test
+    public void requestHttpCityTime(){
+        PositionByCityName positionByCityName  = new PositionByCityName(positionCity);
+        positionByCityName.makeUrl();
+        positionByCityName.doRequest();
+        assertTrue(positionByCityName.findDateTime());
+    }
+    @Test
+    public void urlTimeIsCorrectCity(){
+
+    }
+    @Test
     public void exportJsonCity() throws IOException {
         PositionByCityName positionByCityName  = new PositionByCityName(positionCity);
         positionByCityName.makeUrl();
@@ -82,20 +97,11 @@ public class OpenStreetMapTest {
         assertTrue(positionByCityName.exportJson());
     }
     @Test
-    public void findCityProperties() throws JSONException {
-        PositionByCityName positionByCityName  = new PositionByCityName(positionCity);
-        positionByCityName.makeUrl();
-        positionByCityName.doRequest();
-        positionByCityName.findProperties();
-        assertEquals("France", positionByCityName.getCountryName());
-        assertEquals(50.7396668, positionByCityName.getLatitude(), 0.0);
-        assertEquals(2.7349286, positionByCityName.getLongitude(), 0.0);
-    }
-    @Test
     public void makePositionFinalTest() throws JSONException {
         PositionByCityName positionByCityName  = new PositionByCityName(positionCity);
         positionByCityName.makeUrl();
         positionByCityName.doRequest();
+        positionByCityName.findDateTime();
         positionByCityName.findProperties();
         positionByCityName.makePositionFinal();
         Position endPositionCity = positionByCityName.getCompletePosition();
@@ -105,7 +111,8 @@ public class OpenStreetMapTest {
         assertEquals(2.7349286, endPositionCity.getLongitude(), 0.0);
     }
     @Test
-    public void findPositionProperties() throws JSONException {
+    public void findPositionProperties() throws JSONException, InterruptedException {
+        Thread.sleep(1000);
         PositionByCityName positionByCityName  = new PositionByCityName(positionCity);
         Position endPositionCity = positionByCityName.findPositionProperties();
         assertEquals("France", endPositionCity.getCountry());

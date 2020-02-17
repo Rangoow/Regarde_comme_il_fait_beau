@@ -24,10 +24,13 @@ public class PositionByCoordonate {
 
     private String cityName;
     private String countryName;
+    private String timeZone;
 
     private String urlS = "https://nominatim.openstreetmap.org/reverse?format=json&lat=";
+    private String urlSSTime = "http://api.timezonedb.com/v2.1/get-time-zone?key=F10IKI69VB1W&format=json&by=position&lat=";
 
     private JSONObject json;
+    private JSONObject jsonTime;
     private FileWriter file;
 
     private Position completePosition;
@@ -49,6 +52,7 @@ public class PositionByCoordonate {
 
     public void madeUrl(){
         urlS = urlS + latitudeS + "&lon=" + longitudeS;
+        urlSSTime = urlSSTime + latitudeS + "&lng=" + longitudeS;
     }
 
     public String getUrl(){
@@ -64,6 +68,15 @@ public class PositionByCoordonate {
             InputStream inputStream = connection.getInputStream();
             String result = InputStreamOperations.InputStreamToString(inputStream);
             json = new JSONObject(result);
+
+            URL urlTime = new URL(urlSSTime);
+            HttpURLConnection connectionTime = (HttpURLConnection) urlTime.openConnection();
+            //connection.setConnectTimeout(5000); // 5s
+            //connection.setReadTimeout(5000);
+            connectionTime.connect();
+            InputStream inputStreamTime = connectionTime.getInputStream();
+            String resultTime = InputStreamOperations.InputStreamToString(inputStreamTime);
+            jsonTime = new JSONObject(resultTime);
             return true;
 
         }catch (Exception e){
@@ -97,7 +110,7 @@ public class PositionByCoordonate {
         }else if(adress.has("town")){
             cityName = adress.getString("town");
         }
-
+        timeZone = jsonTime.getString("zoneName");
         countryName = adress.getString("country");
     }
 
@@ -113,9 +126,18 @@ public class PositionByCoordonate {
         completePosition = new Position(latitude, longitude);
         completePosition.setName(cityName);
         completePosition.setCountry(countryName);
+        completePosition.setTimeZone(timeZone);
     }
 
     public Position getPosition(){
         return completePosition;
+    }
+
+    public String getUrlSSTime() {
+        return urlSSTime;
+    }
+
+    public String getTimeZone() {
+        return timeZone;
     }
 }

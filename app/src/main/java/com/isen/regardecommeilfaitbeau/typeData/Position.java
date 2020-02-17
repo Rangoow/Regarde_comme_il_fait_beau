@@ -10,6 +10,8 @@ public class Position {
 
     private double longitude;
 
+    private String timeZone;
+
     public Position(String nameCity){
         this.name = nameCity;
 
@@ -50,5 +52,13 @@ public class Position {
 
     public void setLongitude(double lon){
         longitude = lon;
+    }
+
+    public String getTimeZone() {
+        return timeZone;
+    }
+
+    public void setTimeZone(String timeZone) {
+        this.timeZone = timeZone;
     }
 }

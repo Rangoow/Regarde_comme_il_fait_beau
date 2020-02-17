@@ -12,11 +12,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
 
 public class PositionByCityName {
     private String cityName;
     private String countryName;
+    private String timeZone;
 
     private String latitudeS;
     private String longitudeS;
@@ -25,8 +25,10 @@ public class PositionByCityName {
     private double longitude;
 
     private String urlS = "https://nominatim.openstreetmap.org/search.php?format=json&addressdetails=1&extratags=1&city=";
+    private String urlSSTime = "http://api.timezonedb.com/v2.1/get-time-zone?key=F10IKI69VB1W&format=json&by=position&lat=";
 
     private JSONObject json;
+    private JSONObject jsonTime;
     private FileWriter file;
 
     private Position completePosition;
@@ -37,6 +39,10 @@ public class PositionByCityName {
 
     public void makeUrl(){
         urlS = urlS + cityName;
+    }
+
+    public void makeUrlTime(){
+        urlSSTime = urlSSTime + latitudeS + "&lng=" + longitudeS;
     }
 
     public boolean doRequest(){
@@ -55,6 +61,23 @@ public class PositionByCityName {
             return false;
         }
     }
+
+    public boolean findDateTime(){
+        try{
+            makeUrlTime();
+            URL urlTime = new URL(urlSSTime);
+            HttpURLConnection urlConnectionTime = (HttpURLConnection) urlTime.openConnection();
+            urlConnectionTime.connect();
+            InputStream inputStreamTime = urlConnectionTime.getInputStream();
+            String resultTime = InputStreamOperations.InputStreamToString(inputStreamTime);
+            jsonTime = new JSONObject(resultTime);
+            return true;
+        }catch(Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 
     public boolean exportJson() throws IOException {
         file = new FileWriter("searchByCityName.json");
@@ -81,6 +104,7 @@ public class PositionByCityName {
         longitude = Double.valueOf(longitudeS);
         JSONObject address = json.getJSONObject("address");
         countryName = address.getString("country");
+        timeZone = jsonTime.getString("zoneName");
     }
 
     public void makePositionFinal(){
@@ -88,11 +112,13 @@ public class PositionByCityName {
         completePosition.setLatitude(latitude);
         completePosition.setLongitude(longitude);
         completePosition.setCountry(countryName);
+        completePosition.setTimeZone(timeZone);
     }
 
     public Position findPositionProperties() throws JSONException {
         makeUrl();
         doRequest();
+        findDateTime();
         findProperties();
         makePositionFinal();
         return completePosition;
@@ -116,5 +142,9 @@ public class PositionByCityName {
 
     public String getUrlS() {
         return urlS;
+    }
+
+    public String getTimeZone() {
+        return timeZone;
     }
 }
