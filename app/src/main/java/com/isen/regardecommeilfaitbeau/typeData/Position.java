@@ -43,4 +43,12 @@ public class Position {
     public void setCountry(String country) {
         this.country = country;
     }
+
+    public void setLatitude(double lat){
+        latitude = lat;
+    }
+
+    public void setLongitude(double lon){
+        longitude = lon;
+    }
 }
