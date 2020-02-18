@@ -12,12 +12,14 @@ import java.time.ZonedDateTime;
 public class Time {
 
     private String epochValue;
+    private String zoneIdS;
 
     private ZonedDateTime zonedDateTime;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public Time(String timeValue){
+    public Time(String timeValue, String timeZone){
         epochValue = timeValue;
+        zoneIdS = timeZone;
         makeZonedDateTime();
     }
 
@@ -25,9 +27,9 @@ public class Time {
     private void makeZonedDateTime(){
         long epoch = Long.parseLong(epochValue);
         //epoch = epoch/1000;
-        ZoneId zoneId = ZoneId.of("Europe/Paris");
+        ZoneId zoneId = ZoneId.of(zoneIdS);
         LocalDateTime localDateTime = LocalDateTime.ofEpochSecond(epoch, 0,
-                ZoneId.of("Europe/Paris").getRules().getOffset(Instant.now()));
+                ZoneId.of(zoneIdS).getRules().getOffset(Instant.now()));
         zonedDateTime = ZonedDateTime.of(localDateTime, zoneId);
     }
 
@@ -63,6 +65,10 @@ public class Time {
 
     public String getInternationalFormat(){
         return zonedDateTime.toString();
+    }
+
+    public String getZoneIdS(){
+        return zoneIdS;
     }
 
 }

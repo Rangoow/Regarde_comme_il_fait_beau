@@ -7,7 +7,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class TimeTest {
-    private Time time = new Time("1581952920");
+    private Time time = new Time("1581952920", "Europe/Paris");
 
     @Test
     public void testString(){
