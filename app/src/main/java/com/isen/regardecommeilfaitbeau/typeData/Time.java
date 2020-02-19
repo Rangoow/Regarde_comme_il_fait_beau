@@ -14,7 +14,7 @@ public class Time {
     private String epochValue;
     private String zoneIdS;
 
-    private ZonedDateTime zonedDateTime;
+    protected ZonedDateTime zonedDateTime;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public Time(String timeValue, String timeZone){
