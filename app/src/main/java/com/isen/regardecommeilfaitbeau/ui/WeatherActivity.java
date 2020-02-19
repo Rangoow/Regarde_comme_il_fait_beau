@@ -1,4 +1,4 @@
-package com.isen.regardecommeilfaitbeau.interfaces;
+package com.isen.regardecommeilfaitbeau.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 

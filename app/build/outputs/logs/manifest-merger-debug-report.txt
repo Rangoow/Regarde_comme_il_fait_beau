@@ -72,10 +72,10 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\no
 		ADDED from C:\Users\noees\Desktop\GIT WORKSPACE\ANDROID\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from C:\Users\noees\Desktop\GIT WORKSPACE\ANDROID\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:11:9-40
-activity#com.isen.regardecommeilfaitbeau.interfaces.WeatherActivity
+activity#com.isen.regardecommeilfaitbeau.ui.WeatherActivity
 ADDED from C:\Users\noees\Desktop\GIT WORKSPACE\ANDROID\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from C:\Users\noees\Desktop\GIT WORKSPACE\ANDROID\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:12:19-61
+		ADDED from C:\Users\noees\Desktop\GIT WORKSPACE\ANDROID\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:12:19-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\noees\Desktop\GIT WORKSPACE\ANDROID\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
