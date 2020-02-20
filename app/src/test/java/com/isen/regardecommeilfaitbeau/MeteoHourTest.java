@@ -18,7 +18,7 @@ public class MeteoHourTest {
     @Test
     public void makeObjectTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
@@ -29,15 +29,15 @@ public class MeteoHourTest {
     @Test
     public void timeTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
         assertEquals(2020, meteoHour.getTime().getYears());
         assertEquals(2, meteoHour.getTime().getMonth());
-        assertEquals(18, meteoHour.getTime().getDay());
-        assertEquals(22, meteoHour.getTime().getHour());
+        assertEquals(20, meteoHour.getTime().getDay());
+        assertEquals(9, meteoHour.getTime().getHour());
         assertEquals(0, meteoHour.getTime().getMinute());
         assertEquals(0, meteoHour.getTime().getSecond());
         assertEquals("Europe/Paris", meteoHour.getTime().getZoneIdS());
@@ -46,51 +46,51 @@ public class MeteoHourTest {
     @Test
     public void summaryTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
-        assertEquals("Ciel Dégagé",meteoHour.getSummary());
+        assertEquals("Ciel Couvert",meteoHour.getSummary());
     }
 
     @Test
     public void iconTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
-        assertEquals("clear-night",meteoHour.getIcon());
+        assertEquals("cloudy",meteoHour.getIcon());
     }
 
     @Test
     public void precipIntensityTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
-        assertEquals(0.0094,meteoHour.getPrecipIntensity(), 0);
+        assertEquals(0.0298,meteoHour.getPrecipIntensity(), 0);
     }
 
     @Test
     public void precipProbabilityTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
-        assertEquals(0.01,meteoHour.getPrecipProbability(), 0);
+        assertEquals(0.1,meteoHour.getPrecipProbability(), 0);
     }
 
     @Test
     public void precipTypeTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
@@ -101,106 +101,106 @@ public class MeteoHourTest {
     @Test
     public void temperatureTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
-        assertEquals(5.4,meteoHour.getTemperature(), 0);
+        assertEquals(7.79,meteoHour.getTemperature(), 0);
     }
 
     @Test
     public void apparentTemperatureTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
-        assertEquals(3.46,meteoHour.getApparentTemperature(), 0);
+        assertEquals(3.81,meteoHour.getApparentTemperature(), 0);
     }
 
     @Test
     public void dewPointTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
-        assertEquals(-0.43,meteoHour.getDewPoint(), 0);
+        assertEquals(6.61,meteoHour.getDewPoint(), 0);
     }
 
     @Test
     public void humidityTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
-        assertEquals(0.66,meteoHour.getHumidity(), 0);
+        assertEquals(0.92,meteoHour.getHumidity(), 0);
     }
 
     @Test
     public void pressureTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
-        assertEquals(1031.1,meteoHour.getPressure(),0);
+        assertEquals(1016.0,meteoHour.getPressure(),0);
     }
 
     @Test
     public void windSpeedTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
-        assertEquals(8.62,meteoHour.getWindSpeed(), 0);
+        assertEquals(28.7,meteoHour.getWindSpeed(), 0);
     }
 
     @Test
     public void windGust() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
-        assertEquals(10.09,meteoHour.getWindGust(), 0);
+        assertEquals(50.98,meteoHour.getWindGust(), 0);
     }
 
     @Test
     public void windBearingTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
-        assertEquals(0,meteoHour.getWindBearing(),0);
+        assertEquals(208.0,meteoHour.getWindBearing(),0);
     }
 
     @Test
     public void cloudCoverTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
-        assertEquals(0,meteoHour.getCloudCover(), 0);
+        assertEquals(0.92,meteoHour.getCloudCover(), 0);
     }
 
     @Test
     public void uvIndexTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
@@ -211,7 +211,7 @@ public class MeteoHourTest {
     @Test
     public void visibilityTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
@@ -222,11 +222,11 @@ public class MeteoHourTest {
     @Test
     public void ozoneTest() throws JSONException {
         jsonExample = new JsonExample();
-        JSONObject jsonObject = jsonExample.getJsonObject();
+        JSONObject jsonObject = jsonExample.getJsonObjectHourly();
         JSONObject hourly = jsonObject.getJSONObject("hourly");
         JSONArray data = hourly.getJSONArray("data");
         JSONObject firstHour = data.getJSONObject(0);
         MeteoHour meteoHour = new MeteoHour(firstHour, "Europe/Paris");
-        assertEquals(317.4,meteoHour.getOzone(), 0);
+        assertEquals(316.2,meteoHour.getOzone(), 0);
     }
 }
