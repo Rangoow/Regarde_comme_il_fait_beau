@@ -70,4 +70,8 @@ public class Alert {
     public boolean isMake() {
         return isMake;
     }
+
+    public String getTitle() {
+        return title;
+    }
 }

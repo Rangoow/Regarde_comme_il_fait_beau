@@ -11,8 +11,9 @@ import com.isen.regardecommeilfaitbeau.api.meteo.MeteoHour;
 
 import java.util.ArrayList;
 
-@Dao
+//@Dao
 public interface MeteoDAO {
+    /*
     // Meteo Hour
     @Query("SELECT * FROM MeteoHour")
     ArrayList<MeteoHour> getAllHours();
@@ -41,5 +42,5 @@ public interface MeteoDAO {
     void insertAllAlerts(ArrayList<Alert> alert);
 
     @Query("DELETE FROM Alert")
-    void deleteAllAlerts();
+    void deleteAllAlerts();*/
 }

@@ -7,7 +7,7 @@ import com.isen.regardecommeilfaitbeau.api.meteo.Alert;
 import com.isen.regardecommeilfaitbeau.api.meteo.MeteoDay;
 import com.isen.regardecommeilfaitbeau.api.meteo.MeteoHour;
 
-@Database(entities = {MeteoHour.class, MeteoDay.class, Alert.class}, version = 1)
+//@Database(entities = {MeteoHour.class, MeteoDay.class, Alert.class}, version = 1)
 public abstract class MeteoDatabase extends RoomDatabase {
-    public abstract MeteoDAO meteoDAO();
+    //public abstract MeteoDAO meteoDAO();
 }

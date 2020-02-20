@@ -31,7 +31,7 @@ public class AlertTest {
         JSONArray alertJson = jsonObject.getJSONArray("alerts");
         JSONObject example = alertJson.getJSONObject(0);
         Alert alert = new Alert(example, "Europe/Paris");
-        assertEquals("Risque modéré de crues", alert.getTitle());
+        assertEquals("Risque modéré d'innondations", alert.getTitle());
     }
 
     @Test
