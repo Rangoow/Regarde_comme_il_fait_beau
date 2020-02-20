@@ -2,19 +2,27 @@ package com.isen.regardecommeilfaitbeau.api.meteo;
 
 import android.os.Build;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.room.Embedded;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import com.isen.regardecommeilfaitbeau.typeData.Time;
 
 import org.json.JSONObject;
 
+@Entity
 public class Alert {
     private String title;
     private String severity;
 
+    @NonNull
+    @PrimaryKey
+    @Embedded
     private Time start;
+    @Embedded
     private Time expires;
-
     private boolean isMake;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
