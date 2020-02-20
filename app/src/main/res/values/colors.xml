@@ -3,7 +3,9 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="btnColor">#FF5722</color>
-    <color name="bckgroundColor">#2196F3</color>
+    <color name="bckgroundColor">#D22196F3</color>
+    <color name="detailsBckgroundColor">#3078AF</color>
+    <color name="forecastBckgroundColor">#59A3F0</color>
     <color name="colorPrimary">#135685</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
