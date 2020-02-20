@@ -1,118 +1,61 @@
 package com.isen.regardecommeilfaitbeau.api.meteo;
 
-import android.os.Build;
-
-import androidx.annotation.RequiresApi;
+import androidx.annotation.NonNull;
+import androidx.room.Embedded;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
 
 import com.isen.regardecommeilfaitbeau.typeData.Time;
 
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 
+@Entity
 public class MeteoDay {
 
-    private Time time;
-    private String summary;
-    private String icon;
+    @NonNull @PrimaryKey @Embedded
     private Time sunriseTime;
+    @Embedded
     private Time sunsetTime;
 
-    private double moonPhase;
+    private String moonPhase;
 
-    private double precipIntensity;
     private double precipIntensityMax;
+    @Embedded
     private Time precipIntensityMaxTime;
-    private double precipProbability;
     private String precipType;
 
+    private double temperatureHigh;
+    @Embedded
+    private Time temperatureHighTime;
+    private double temperatureLow;
+    @Embedded
+    private Time temperatureLowTime;
+
     private double temperatureMin;
+    @Embedded
     private Time temperatureMinTime;
     private double temperatureMax;
+    @Embedded
     private Time temperatureMaxTime;
 
     private double apparentTemperatureMin;
+    @Embedded
     private Time apparentTemperatureMinTime;
     private double apparentTemperatureMax;
+    @Embedded
     private Time apparentTemperatureMaxTime;
 
-    private double dewPoint;
-    private double humidity;
-    private double pressure;
-
-    private double windSpeed;
-    private double windGust;
+    @Embedded
     private Time windGustTime;
-    private double windBearing;
-    private double cloudCover;
-    private double uvIndex;
+    @Embedded
     private Time uvIndexTime;
-    private double visibility;
-    private double ozone;
 
+    @Ignore
     private ArrayList<MeteoHour> hourByHour;
 
-    private boolean isMake;
-
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public MeteoDay(JSONObject jsonObject, String timeZone, ArrayList<MeteoHour> hoursOfDay){
-        hourByHour = hoursOfDay;
-        makeObject(jsonObject, timeZone);
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    private boolean makeObject(JSONObject jsonObject, String timeZone){
-        try{
-            time = new Time(Integer.toString(jsonObject.getInt("time")),  timeZone);
-            summary = jsonObject.getString("summary");
-            icon = jsonObject.getString("icon");
-            sunriseTime = new Time(Integer.toString(jsonObject.getInt("sunriseTime")), timeZone);
-            sunsetTime = new Time(Integer.toString(jsonObject.getInt("sunsetTime")), timeZone);
-            moonPhase = jsonObject.getDouble("moonPhase");
-            precipIntensity = jsonObject.getDouble("precipIntensity");
-            precipIntensityMax = jsonObject.getDouble("precipIntensityMax");
-            precipIntensityMaxTime = new Time(Integer.toString(jsonObject.getInt("precipIntensityMaxTime")), timeZone);
-            precipProbability = jsonObject.getDouble("precipProbability");
-            precipType = jsonObject.getString("precipType");
-            temperatureMax = jsonObject.getDouble("temperatureMax");
-            temperatureMaxTime = new Time(Integer.toString(jsonObject.getInt("temperatureMaxTime")), timeZone);
-            temperatureMin = jsonObject.getDouble("temperatureMin");
-            temperatureMinTime = new Time(Integer.toString(jsonObject.getInt("temperatureMinTime")), timeZone);
-            apparentTemperatureMax = jsonObject.getDouble("apparentTemperatureMax");
-            apparentTemperatureMaxTime = new Time(Integer.toString(jsonObject.getInt("apparentTemperatureMaxTime")), timeZone);
-            apparentTemperatureMin = jsonObject.getDouble("apparentTemperatureMin");
-            apparentTemperatureMinTime = new Time(Integer.toString(jsonObject.getInt("apparentTemperatureMinTime")), timeZone);
-            dewPoint = jsonObject.getDouble("dewPoint");
-            humidity = jsonObject.getDouble("humidity");
-            pressure = jsonObject.getDouble("pressure");
-            windSpeed = jsonObject.getDouble("windSpeed");
-            windGust = jsonObject.getDouble("windGust");
-            windGustTime = new Time(Integer.toString(jsonObject.getInt("windGustTime")), timeZone);
-            windBearing = jsonObject.getDouble("windBearing");
-            cloudCover = jsonObject.getDouble("cloudCover");
-            uvIndex = jsonObject.getDouble("uvIndex");
-            uvIndexTime = new Time(Integer.toString(jsonObject.getInt("uvIndexTime")), timeZone);
-            visibility = jsonObject.getDouble("visibility");
-            ozone = jsonObject.getDouble("ozone");
-            isMake = true;
-            return true;
-        }catch(Exception e){
-            e.printStackTrace();
-            isMake = false;
-            return false;
-        }
-    }
-
-    public Time getTime() {
-        return time;
-    }
-
-    public String getSummary() {
-        return summary;
-    }
-
-    public String getIcon() {
-        return icon;
+    public ArrayList<MeteoHour> getHourByHour() {
+        return this.hourByHour;
     }
 
     public Time getSunriseTime() {
@@ -123,12 +66,8 @@ public class MeteoDay {
         return sunsetTime;
     }
 
-    public double getMoonPhase() {
+    public String getMoonPhase() {
         return moonPhase;
-    }
-
-    public double getPrecipIntensity() {
-        return precipIntensity;
     }
 
     public double getPrecipIntensityMax() {
@@ -139,12 +78,24 @@ public class MeteoDay {
         return precipIntensityMaxTime;
     }
 
-    public double getPrecipProbability() {
-        return precipProbability;
-    }
-
     public String getPrecipType() {
         return precipType;
+    }
+
+    public double getTemperatureHigh() {
+        return temperatureHigh;
+    }
+
+    public Time getTemperatureHighTime() {
+        return temperatureHighTime;
+    }
+
+    public double getTemperatureLow() {
+        return temperatureLow;
+    }
+
+    public Time getTemperatureLowTime() {
+        return temperatureLowTime;
     }
 
     public double getTemperatureMin() {
@@ -179,59 +130,11 @@ public class MeteoDay {
         return apparentTemperatureMaxTime;
     }
 
-    public double getDewPoint() {
-        return dewPoint;
-    }
-
-    public double getHumidity() {
-        return humidity;
-    }
-
-    public double getPressure() {
-        return pressure;
-    }
-
-    public double getWindSpeed() {
-        return windSpeed;
-    }
-
-    public double getWindGust() {
-        return windGust;
-    }
-
     public Time getWindGustTime() {
         return windGustTime;
     }
 
-    public double getWindBearing() {
-        return windBearing;
-    }
-
-    public double getCloudCover() {
-        return cloudCover;
-    }
-
-    public double getUvIndex() {
-        return uvIndex;
-    }
-
     public Time getUvIndexTime() {
         return uvIndexTime;
-    }
-
-    public double getVisibility() {
-        return visibility;
-    }
-
-    public double getOzone() {
-        return ozone;
-    }
-
-    public ArrayList<MeteoHour> getHourByHour() {
-        return hourByHour;
-    }
-
-    public boolean isMake() {
-        return isMake;
     }
 }

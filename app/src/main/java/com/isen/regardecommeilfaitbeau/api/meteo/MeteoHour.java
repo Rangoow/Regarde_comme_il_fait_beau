@@ -2,17 +2,27 @@ package com.isen.regardecommeilfaitbeau.api.meteo;
 
 import android.os.Build;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.room.ColumnInfo;
+import androidx.room.Embedded;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import com.google.gson.annotations.SerializedName;
+
 
 import com.isen.regardecommeilfaitbeau.typeData.Time;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+@Entity
 public class MeteoHour {
 
     private boolean make;
 
+    @NonNull @PrimaryKey() @Embedded
     private Time time;
     private String summary;
     private String icon;
