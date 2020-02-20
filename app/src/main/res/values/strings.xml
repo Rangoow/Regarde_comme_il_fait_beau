@@ -9,4 +9,6 @@
     <string name="weatherDesc">Sunny</string>
     <string name="cityInputHint">Enter your city</string>
     <string name="iconWeatherDesc">weather icon</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 </resources>
