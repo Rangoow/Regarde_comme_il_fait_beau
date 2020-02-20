@@ -1,12 +1,22 @@
 <resources>
     <string name="app_name">Regarde Comme Il Fait Beau</string>
-    <string name="detailsBtn">Details</string>
-    <string name="todayBtn">Today</string>
-    <string name="forecastBtn">Forecast</string>
     <string name="temperatureTxt">20</string>
     <string name="temperatureUnitTxt">°C</string>
     <string name="cityTxt">Lille</string>
     <string name="weatherDesc">Sunny</string>
     <string name="cityInputHint">Enter your city</string>
     <string name="iconWeatherDesc">weather icon</string>
+    <string name="dateTxt">Thursday 2 December</string>
+    <string name="temperatureMax">20°C</string>
+    <string name="temperatureMin">14°C</string>
+    <string name="humidityTxt">Humidity</string>
+    <string name="pressureTxt">Pressure</string>
+    <string name="windTxt">Wind</string>
+    <string name="humidityValueTxt">70 %</string>
+    <string name="pressureValueTxt">974 hPa</string>
+    <string name="windValueTxt">15 km/h</string>
+    <string name="sunsetTxt">Sunset</string>
+    <string name="sunriseTxt">Sunrise</string>
+    <string name="sunsetValueTxt">07:49</string>
+    <string name="sunriseValueTxt">18:14</string>
 </resources>

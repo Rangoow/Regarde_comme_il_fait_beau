@@ -8,9 +8,9 @@
 
 
     <TextView
-        android:id="@+id/temperature"
-        android:layout_width="100dp"
-        android:layout_height="81dp"
+        android:id="@+id/temperature_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/blogger"
         android:text="@string/temperatureTxt"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/city"
+        android:id="@+id/city_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -33,10 +33,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/temperature" />
+        app:layout_constraintTop_toBottomOf="@+id/temperature_id" />
 
     <TextView
-        android:id="@+id/weatherDescription"
+        android:id="@+id/weatherDescription_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -47,10 +47,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/city" />
+        app:layout_constraintTop_toBottomOf="@+id/city_id" />
 
     <ImageView
-        android:id="@+id/weatherDescriptionIcon"
+        android:id="@+id/weatherDescriptionIcon_id"
         android:layout_width="197dp"
         android:layout_height="173dp"
         android:layout_marginTop="16dp"
@@ -59,10 +59,10 @@
         android:src="@drawable/ic_wi_day_sunny"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weatherDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/weatherDescription_id" />
 
     <EditText
-        android:id="@+id/cityInput"
+        android:id="@+id/cityInput_id"
         android:layout_width="206dp"
         android:layout_height="53dp"
         android:layout_marginStart="24dp"
@@ -75,11 +75,11 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/refreshBtn"
+        app:layout_constraintEnd_toStartOf="@+id/refreshBtn_id"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/refreshBtn"
+        android:id="@+id/refreshBtn_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
@@ -88,11 +88,11 @@
         app:backgroundTint="@color/btnColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cityInput"
+        app:layout_constraintStart_toEndOf="@+id/cityInput_id"
         app:srcCompat="@drawable/ic_refresh" />
 
     <TextView
-        android:id="@+id/tempUnit"
+        android:id="@+id/tempUnit_id"
         android:layout_width="58dp"
         android:layout_height="36dp"
         android:layout_marginTop="80dp"
@@ -101,7 +101,7 @@
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/temperature"
+        app:layout_constraintStart_toEndOf="@+id/temperature_id"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

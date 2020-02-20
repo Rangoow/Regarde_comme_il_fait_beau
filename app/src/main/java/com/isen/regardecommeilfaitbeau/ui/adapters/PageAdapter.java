@@ -40,11 +40,11 @@ public class PageAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch(position){
             case 0:
-                return "Today\nDetails";
+                return "Details";
             case 1:
-                return "Today\nWeather";
+                return "Today";
             case 2:
-                return "Weather\nForecast";
+                return "Forecast";
             default:
                 return null;
         }
