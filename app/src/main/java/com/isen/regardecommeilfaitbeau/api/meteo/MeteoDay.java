@@ -1,38 +1,57 @@
 package com.isen.regardecommeilfaitbeau.api.meteo;
 
+import androidx.annotation.NonNull;
+import androidx.room.Embedded;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
 import com.isen.regardecommeilfaitbeau.typeData.Time;
 
 import java.util.ArrayList;
 
+@Entity
 public class MeteoDay {
 
+    @NonNull @PrimaryKey @Embedded
     private Time sunriseTime;
+    @Embedded
     private Time sunsetTime;
 
     private String moonPhase;
 
     private double precipIntensityMax;
+    @Embedded
     private Time precipIntensityMaxTime;
     private String precipType;
 
     private double temperatureHigh;
+    @Embedded
     private Time temperatureHighTime;
     private double temperatureLow;
+    @Embedded
     private Time temperatureLowTime;
 
     private double temperatureMin;
+    @Embedded
     private Time temperatureMinTime;
     private double temperatureMax;
+    @Embedded
     private Time temperatureMaxTime;
 
     private double apparentTemperatureMin;
+    @Embedded
     private Time apparentTemperatureMinTime;
     private double apparentTemperatureMax;
+    @Embedded
     private Time apparentTemperatureMaxTime;
 
+    @Embedded
     private Time windGustTime;
+    @Embedded
     private Time uvIndexTime;
 
+    @Ignore
     private ArrayList<MeteoHour> hourByHour;
 
     public ArrayList<MeteoHour> getHourByHour() {

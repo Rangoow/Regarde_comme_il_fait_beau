@@ -1,12 +1,20 @@
 package com.isen.regardecommeilfaitbeau.api.meteo;
 
+import androidx.annotation.NonNull;
+import androidx.room.Embedded;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.isen.regardecommeilfaitbeau.typeData.Time;
 
+@Entity
 public class Alert {
     private String title;
     private String severity;
 
+    @NonNull @PrimaryKey @Embedded
     private Time time;
+    @Embedded
     private Time expires;
 
     private void traductTitle() {
