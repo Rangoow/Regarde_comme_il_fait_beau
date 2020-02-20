@@ -48,6 +48,10 @@ public class Alert {
                 break;
             case "Moderate Thunderstorm Warning":
                 this.title = "Risque modéré d'orages";
+                break;
+            case "Moderate Snow-ice Warning":
+                this.title = "Risque de chute modéré de neige";
+                break;
             default:
                 break;
         }

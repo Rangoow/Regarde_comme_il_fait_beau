@@ -28,6 +28,8 @@ public class DarkSkyPastHour {
     private JSONObject jsonObject;
     private JSONArray hourly;
 
+    private boolean requestDone;
+
     @RequiresApi(api = Build.VERSION_CODES.O)
     public DarkSkyPastHour(Position position, TimeStartDay timeStartDay) throws JSONException {
         this.position = position;
@@ -57,8 +59,10 @@ public class DarkSkyPastHour {
             InputStream inputStream = urlConnection.getInputStream();
             String result = InputStreamOperations.InputStreamToString(inputStream);
             jsonObject = new JSONObject(result);
+            requestDone = true;
         }catch (Exception e){
             e.printStackTrace();
+            requestDone = false;
         }
     }
 
@@ -73,5 +77,9 @@ public class DarkSkyPastHour {
 
     public JSONArray getHourly() {
         return hourly;
+    }
+
+    public boolean isRequestDone() {
+        return requestDone;
     }
 }
