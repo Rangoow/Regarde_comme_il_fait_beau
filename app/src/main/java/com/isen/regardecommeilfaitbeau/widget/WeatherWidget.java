@@ -9,17 +9,22 @@ import com.isen.regardecommeilfaitbeau.R;
 
 /**
  * Implementation of App Widget functionality.
+ * App Widget Configuration implemented in {@link WeatherWidgetConfigureActivity WeatherWidgetConfigureActivity}
  */
 public class WeatherWidget extends AppWidgetProvider {
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
 
-        CharSequence widgetText = context.getString(R.string.appwidget_text);
+        CharSequence widgetText = WeatherWidgetConfigureActivity.loadTitlePref(context, appWidgetId);
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.weather_widget);
         views.setTextViewText(R.id.appwidget_text, widgetText);
 
+
+        //Set the image view
+        int sun = R.drawable.ic_wi_day_sunny;
+        views.setImageViewResource(R.id.imageView, sun);
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);
     }
@@ -29,6 +34,14 @@ public class WeatherWidget extends AppWidgetProvider {
         // There may be multiple widgets active, so update all of them
         for (int appWidgetId : appWidgetIds) {
             updateAppWidget(context, appWidgetManager, appWidgetId);
+        }
+    }
+
+    @Override
+    public void onDeleted(Context context, int[] appWidgetIds) {
+        // When the user deletes the widget, delete the preference associated with it.
+        for (int appWidgetId : appWidgetIds) {
+            WeatherWidgetConfigureActivity.deleteTitlePref(context, appWidgetId);
         }
     }
 
