@@ -15,14 +15,16 @@ import static org.junit.Assert.assertTrue;
 public class RequestTest {
 
     private Request requestCoordonate;
+    private Request requestCity;
 
     @Before
     public void makeTestCoordonate() throws JSONException {
         requestCoordonate = new Request(50.72301, 2.73896);
+        requestCity = new Request("Bailleul");
     }
 
     @Test
-    public void isMakCoordonate(){
+    public void isMakeCoordonate(){
         assertTrue(requestCoordonate.isDone());
     }
 
@@ -33,6 +35,7 @@ public class RequestTest {
         assertEquals("France", position.getCountry());
         assertEquals(50.72301, position.getLatitude(), 0.0);
         assertEquals(2.73896, position.getLongitude(), 0.0);
+        assertEquals("Europe/Paris", position.getTimeZone());
     }
 
     @Test
@@ -63,6 +66,51 @@ public class RequestTest {
     @Test
     public void futurHourTestCoordonate(){
         assertNotNull(requestCoordonate.getFuturHours());
+    }
+
+    @Test
+    public void isMakeCity(){
+        assertTrue(requestCity.isDone());
+    }
+
+    @Test
+    public void positionTestCity(){
+        Position position = requestCity.getPosition();
+        assertEquals("Bailleul", position.getName());
+        assertEquals("France", position.getCountry());
+        assertEquals(50.7396668, position.getLatitude(), 0.0);
+        assertEquals(2.7349286, position.getLongitude(), 0.0);
+        assertEquals("Europe/Paris", position.getTimeZone());
+    }
+
+    @Test
+    public void actualTimeTestCity(){
+        assertNotNull(requestCity.getActualTime());
+    }
+
+    @Test
+    public void currentlyTestCity(){
+        assertNotNull(requestCity.getCurrently());
+    }
+
+    @Test
+    public void dailyTestCity(){
+        assertNotNull(requestCity.getDaily());
+    }
+
+    @Test
+    public void alertTestCity(){
+        assertNull(requestCity.getAlerts());
+    }
+
+    @Test
+    public void pastHourCity(){
+        assertNotNull(requestCity.getPastHours());
+    }
+
+    @Test
+    public void futurHourCity(){
+        assertNotNull(requestCity.getFuturHours());
     }
 
 }

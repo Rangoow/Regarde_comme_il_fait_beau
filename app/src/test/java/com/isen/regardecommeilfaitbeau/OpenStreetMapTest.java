@@ -115,6 +115,7 @@ public class OpenStreetMapTest {
         Thread.sleep(1000);
         PositionByCityName positionByCityName  = new PositionByCityName(positionCity);
         Position endPositionCity = positionByCityName.findPositionProperties();
+        assertEquals("Europe/Paris", endPositionCity.getTimeZone());
         assertEquals("France", endPositionCity.getCountry());
         assertEquals("Bailleul", endPositionCity.getName());
         assertEquals(50.7396668, endPositionCity.getLatitude(), 0.0);

@@ -41,7 +41,7 @@ public class PositionByCityName {
         urlS = urlS + cityName;
     }
 
-    public void makeUrlTime(){
+    private void makeUrlTime(){
         urlSSTime = urlSSTime + latitudeS + "&lng=" + longitudeS;
     }
 
@@ -104,6 +104,9 @@ public class PositionByCityName {
         longitude = Double.valueOf(longitudeS);
         JSONObject address = json.getJSONObject("address");
         countryName = address.getString("country");
+    }
+
+    private void setTimeZoneProperties() throws JSONException {
         timeZone = jsonTime.getString("zoneName");
     }
 
@@ -118,8 +121,9 @@ public class PositionByCityName {
     public Position findPositionProperties() throws JSONException {
         makeUrl();
         doRequest();
-        findDateTime();
         findProperties();
+        findDateTime();
+        setTimeZoneProperties();
         makePositionFinal();
         return completePosition;
     }
