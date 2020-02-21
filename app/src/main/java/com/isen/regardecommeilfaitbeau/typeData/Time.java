@@ -28,6 +28,7 @@ public class Time {
     }
 
     // Reconstructeur depuis BDD
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Time(ZonedDateTime zonedDateTime) {
         this.zonedDateTime = zonedDateTime;
         this.zoneIdS = zonedDateTime.getZone().toString();

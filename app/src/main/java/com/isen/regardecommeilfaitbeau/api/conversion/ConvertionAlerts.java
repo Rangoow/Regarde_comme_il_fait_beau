@@ -5,10 +5,10 @@ import android.os.Build;
 import androidx.annotation.RequiresApi;
 
 import com.isen.regardecommeilfaitbeau.api.meteo.Alert;
+import com.isen.regardecommeilfaitbeau.typeData.Time;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -18,11 +18,19 @@ public class ConvertionAlerts {
     private JSONArray alertsJSON;
     private ArrayList<Alert> alerts;
 
+    private boolean isMake;
+
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public ConvertionAlerts(JSONArray alertsJSON, String timeZone) throws JSONException {
+    public ConvertionAlerts(JSONArray alertsJSON, Time time) throws JSONException {
         this.alertsJSON = alertsJSON;
-        this.timeZone = timeZone;
+        this.timeZone = time.getZoneIdS();
+        makeObject();
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    private void makeObject() throws JSONException {
         makeArray();
+        isMake = true;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -36,5 +44,13 @@ public class ConvertionAlerts {
 
     public ArrayList<Alert> getAlerts() {
         return alerts;
+    }
+
+    public JSONArray getAlertsJSON() {
+        return alertsJSON;
+    }
+
+    public boolean isMake() {
+        return isMake;
     }
 }

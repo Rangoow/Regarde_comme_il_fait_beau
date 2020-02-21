@@ -3,6 +3,7 @@ package com.isen.regardecommeilfaitbeau;
 import com.isen.regardecommeilfaitbeau.api.Request.ComptementaryClass.JsonExample;
 import com.isen.regardecommeilfaitbeau.api.meteo.MeteoDay;
 import com.isen.regardecommeilfaitbeau.api.meteo.MeteoHour;
+import com.isen.regardecommeilfaitbeau.exception.NumberHoursOfDayException;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,7 +20,7 @@ public class MeteoDayTest {
     private JsonExample jsonExample;
 
     @Test
-    public void makeObjectTest() throws JSONException {
+    public void makeObjectTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -31,7 +32,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void hourByHourTest() throws JSONException {
+    public void hourByHourTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -43,7 +44,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void timeTest() throws JSONException {
+    public void timeTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -61,7 +62,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void summaryTest() throws JSONException {
+    public void summaryTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -73,7 +74,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void iconTest() throws JSONException {
+    public void iconTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -85,7 +86,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void sunriseTest() throws JSONException {
+    public void sunriseTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -104,7 +105,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void sunsetTest() throws JSONException {
+    public void sunsetTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -122,7 +123,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void moonPhaseTest() throws JSONException {
+    public void moonPhaseTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -134,7 +135,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void precipIntensityTest() throws JSONException {
+    public void precipIntensityTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -146,7 +147,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void precipIntensityMaxTest() throws JSONException {
+    public void precipIntensityMaxTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -158,7 +159,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void precipIntensityMaxTimeTest() throws JSONException {
+    public void precipIntensityMaxTimeTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -176,7 +177,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void precipProbabilityTest() throws JSONException {
+    public void precipProbabilityTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -188,7 +189,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void precipTypeTest() throws JSONException {
+    public void precipTypeTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -200,7 +201,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void temperatureMinTest() throws JSONException {
+    public void temperatureMinTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -212,7 +213,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void temperatureMinTimeTest() throws JSONException {
+    public void temperatureMinTimeTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -230,7 +231,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void temperatureMaxTest() throws JSONException {
+    public void temperatureMaxTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -242,7 +243,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void temperatureMaxTimeTest() throws JSONException {
+    public void temperatureMaxTimeTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -260,7 +261,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void apparentTemperatureMinTest() throws JSONException {
+    public void apparentTemperatureMinTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -272,7 +273,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void apparentTemperatureMinTimeTest() throws JSONException {
+    public void apparentTemperatureMinTimeTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -290,7 +291,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void apparentTemperatureMaxTest() throws JSONException {
+    public void apparentTemperatureMaxTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -302,7 +303,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void apparentTemperatureMaxTimeTest() throws JSONException {
+    public void apparentTemperatureMaxTimeTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -320,7 +321,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void dewPointTest() throws JSONException {
+    public void dewPointTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -332,7 +333,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void humidityTest() throws JSONException {
+    public void humidityTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -344,7 +345,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void pressureTest() throws JSONException {
+    public void pressureTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -356,7 +357,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void windSpeedTest() throws JSONException {
+    public void windSpeedTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -368,7 +369,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void windGustTest() throws JSONException {
+    public void windGustTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -380,7 +381,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void windGustTimeTest() throws JSONException {
+    public void windGustTimeTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -398,7 +399,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void windBearingTest() throws JSONException {
+    public void windBearingTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -410,7 +411,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void cloudCoverTest() throws JSONException {
+    public void cloudCoverTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -422,7 +423,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void uvIndexTest() throws JSONException {
+    public void uvIndexTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -434,7 +435,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void uvIndexTimeTest() throws JSONException {
+    public void uvIndexTimeTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -452,7 +453,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void visibilityTest() throws JSONException {
+    public void visibilityTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");
@@ -464,7 +465,7 @@ public class MeteoDayTest {
     }
 
     @Test
-    public void ozoneTest() throws JSONException {
+    public void ozoneTest() throws JSONException, NumberHoursOfDayException {
         jsonExample  = new JsonExample();
         JSONObject jsonObject = jsonExample.getJsonObject();
         JSONObject daily = jsonObject.getJSONObject("daily");

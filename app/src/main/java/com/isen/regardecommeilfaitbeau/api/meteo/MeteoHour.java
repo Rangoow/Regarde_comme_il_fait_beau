@@ -47,7 +47,7 @@ public class MeteoHour {
         this.makeObject(jsonObject, timeZone);
     }
 
-    public MeteoHour(boolean make, @NonNull Time time, String summary, String icon, double precipIntensity, double precipProbability, String precipType, double temperature, double apparentTemperature, double dewPoint, double humidity, double pressure, double windSpeed, double windGust, double windBearing, double cloudCover, double uvIndex, double visibility, double ozone) {
+    public MeteoHour(boolean make, @NonNull Time time, String summary, String icon, double precipIntensity, double precipProbability/*, String precipType*/, double temperature, double apparentTemperature, double dewPoint, double humidity, double pressure, double windSpeed, double windGust, double windBearing, double cloudCover, double uvIndex, double visibility, double ozone) {
         this.make = make;
         this.time = time;
         this.summary = summary;
@@ -77,7 +77,7 @@ public class MeteoHour {
             icon = jsonObject.getString("icon");
             precipIntensity = jsonObject.getDouble("precipIntensity");
             precipProbability = jsonObject.getDouble("precipProbability");
-            precipType = jsonObject.getString("precipType");
+            precipType = ""; //jsonObject.getString("precipType");
             temperature = jsonObject.getDouble("temperature");
             apparentTemperature = jsonObject.getDouble("apparentTemperature");
             dewPoint = jsonObject.getDouble("dewPoint");

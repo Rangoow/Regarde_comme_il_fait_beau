@@ -71,6 +71,7 @@ public class TimeTest {
 
     @Test
     public void testTimestamp(){
+        assertEquals("1581952920", time.getEpochValue());
         assertEquals(1581894000, timeStartDay.getTimetamp());
     }
 }

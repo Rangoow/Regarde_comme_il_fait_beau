@@ -9,6 +9,7 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import com.isen.regardecommeilfaitbeau.exception.NumberHoursOfDayException;
 import com.isen.regardecommeilfaitbeau.typeData.Time;
 
 import org.json.JSONObject;
@@ -72,8 +73,12 @@ public class MeteoDay {
     private boolean isMake;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public MeteoDay(JSONObject jsonObject, String timeZone, List<MeteoHour> hoursOfDay){
-        hourByHour = hoursOfDay;
+    public MeteoDay(JSONObject jsonObject, String timeZone, List<MeteoHour> hoursOfDay) throws NumberHoursOfDayException {
+        if(hoursOfDay.size() == 24 || hoursOfDay.isEmpty()){
+            hourByHour = hoursOfDay;
+        }else{
+            throw new NumberHoursOfDayException();
+        }
         makeObject(jsonObject, timeZone);
     }
 
