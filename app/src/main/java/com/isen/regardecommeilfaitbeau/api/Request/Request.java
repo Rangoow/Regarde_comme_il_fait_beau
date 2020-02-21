@@ -28,16 +28,22 @@ public class Request {
     private JSONArray pastHours;
     private JSONArray futurHours;
 
+    private boolean isDone;
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Request(String cityName) throws JSONException {
         Position initialPosistion = new Position(cityName);
         PositionByCityName positionByCityName = new PositionByCityName(initialPosistion);
         position = positionByCityName.findPositionProperties();
+        makeGlobalInformation();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public Request(double latitude, double longitude) throws JSONException {
         Position initialPosition = new Position(latitude, longitude);
         PositionByCoordonate positionByCoordonate = new PositionByCoordonate(initialPosition);
         position = positionByCoordonate.findPositionProperties();
+        makeGlobalInformation();
     }
 
     public Position getPosition() {
@@ -58,6 +64,7 @@ public class Request {
         pastHours = darkSkyPastHour.getHourly();
         DarkSkyFuturHour darkSkyFuturHour = new DarkSkyFuturHour(position);
         futurHours = darkSkyFuturHour.getHourly();
+        isDone = true;
     }
 
     public Time getActualTime() {
@@ -82,5 +89,9 @@ public class Request {
 
     public JSONArray getFuturHours() {
         return futurHours;
+    }
+
+    public boolean isDone() {
+        return isDone;
     }
 }
