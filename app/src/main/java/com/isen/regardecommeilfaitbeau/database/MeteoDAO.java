@@ -10,37 +10,38 @@ import com.isen.regardecommeilfaitbeau.api.meteo.MeteoDay;
 import com.isen.regardecommeilfaitbeau.api.meteo.MeteoHour;
 
 import java.util.ArrayList;
+import java.util.List;
 
-//@Dao
+@Dao
 public interface MeteoDAO {
-    /*
+
     // Meteo Hour
     @Query("SELECT * FROM MeteoHour")
-    ArrayList<MeteoHour> getAllHours();
+    List<MeteoHour> getAllHours();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertAllHours(ArrayList<MeteoHour> meteo);
+    void insertAllHours(List<MeteoHour> meteo);
 
     @Query("DELETE FROM MeteoHour")
     void deleteAllHours();
 
     // Meteo Day
     @Query("SELECT * FROM MeteoDay")
-    ArrayList<MeteoDay> getAllDays();
+    List<MeteoDay> getAllDays();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertAllDays(ArrayList<MeteoDay> meteo);
+    void insertAllDays(List<MeteoDay> meteo);
 
     @Query("DELETE FROM MeteoDay")
     void deleteAllDays();
 
     // Alert
     @Query("SELECT * FROM Alert")
-    ArrayList<Alert> getAllAlerts();
+    List<Alert> getAllAlerts();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertAllAlerts(ArrayList<Alert> alert);
+    void insertAllAlerts(List<Alert> alert);
 
     @Query("DELETE FROM Alert")
-    void deleteAllAlerts();*/
+    void deleteAllAlerts();
 }

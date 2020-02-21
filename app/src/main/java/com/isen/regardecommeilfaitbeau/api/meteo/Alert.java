@@ -2,18 +2,24 @@ package com.isen.regardecommeilfaitbeau.api.meteo;
 
 import android.os.Build;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.room.Embedded;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import com.isen.regardecommeilfaitbeau.typeData.Time;
 
 import org.json.JSONObject;
 
+@Entity
 public class Alert {
     private String title;
     private String severity;
 
-    private Time time;
+    @NonNull @PrimaryKey() @Embedded(prefix = "start")
     private Time start;
+    @Embedded(prefix = "expires")
     private Time expires;
 
     private boolean isMake;
@@ -22,6 +28,14 @@ public class Alert {
     public Alert(JSONObject jsonObject, String timeZone){
         makeObject(jsonObject, timeZone);
         traductTitle();
+    }
+
+    public Alert(String title, String severity, @NonNull Time start, Time expires, boolean isMake) {
+        this.title = title;
+        this.severity = severity;
+        this.start = start;
+        this.expires = expires;
+        this.isMake = isMake;
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -57,13 +71,12 @@ public class Alert {
         }
     }
 
+    // Getters
+
     public String getSeverity() {
         return severity;
     }
 
-    public Time getTime() {
-        return time;
-    }
     public Time getStart() {
         return start;
     }
@@ -77,5 +90,28 @@ public class Alert {
 
     public String getTitle() {
         return title;
+    }
+
+    // Setters
+
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setSeverity(String severity) {
+        this.severity = severity;
+    }
+
+    public void setStart(@NonNull Time start) {
+        this.start = start;
+    }
+
+    public void setExpires(Time expires) {
+        this.expires = expires;
+    }
+
+    public void setMake(boolean make) {
+        isMake = make;
     }
 }

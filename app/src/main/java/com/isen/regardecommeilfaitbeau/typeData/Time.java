@@ -2,7 +2,9 @@ package com.isen.regardecommeilfaitbeau.typeData;
 
 import android.os.Build;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.room.Ignore;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -10,10 +12,12 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
 public class Time {
-
+    @Ignore
     private String epochValue;
+    @Ignore
     private String zoneIdS;
 
+    @NonNull
     protected ZonedDateTime zonedDateTime;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -21,6 +25,14 @@ public class Time {
         epochValue = timeValue;
         zoneIdS = timeZone;
         makeZonedDateTime();
+    }
+
+    // Reconstructeur depuis BDD
+    public Time(ZonedDateTime zonedDateTime) {
+        this.zonedDateTime = zonedDateTime;
+        this.zoneIdS = zonedDateTime.getZone().toString();
+        this.epochValue = Long.toString(zonedDateTime.toEpochSecond());
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -69,6 +81,14 @@ public class Time {
 
     public String getZoneIdS(){
         return zoneIdS;
+    }
+
+    public String getEpochValue() {
+        return this.epochValue;
+    }
+
+    public ZonedDateTime getZonedDateTime() {
+        return this.zonedDateTime;
     }
 
 }
