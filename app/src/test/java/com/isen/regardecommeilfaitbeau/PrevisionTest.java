@@ -74,6 +74,7 @@ public class PrevisionTest {
         assertEquals(18, previsionCity.getMeteoDay().get(0).getSunsetTime().getHour());
     }
 
+
     @Test
     public void sunriseTest(){
         System.out.println("Test sunrise");
