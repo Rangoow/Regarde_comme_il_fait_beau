@@ -66,19 +66,4 @@ public class PrevisionTest {
             assertEquals(24, i.getHourByHour().size());
         }
     }
-
-    @Test
-    public void sunsetTest(){
-        System.out.println("Test Sunset");
-        assertEquals(18, previsionCoordonate.getMeteoDay().get(0).getSunsetTime().getHour());
-        assertEquals(18, previsionCity.getMeteoDay().get(0).getSunsetTime().getHour());
-    }
-
-
-    @Test
-    public void sunriseTest(){
-        System.out.println("Test sunrise");
-        assertEquals(7, previsionCoordonate.getMeteoDay().get(0).getSunriseTime().getHour());
-        assertEquals(7, previsionCoordonate.getMeteoDay().get(0).getSunriseTime().getHour());
-    }
 }

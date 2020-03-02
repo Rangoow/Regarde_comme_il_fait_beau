@@ -89,13 +89,3 @@ lint/tmp/
 
 #build
 app/build/
-.idea/misc.xml
-.idea/misc.xml
-app/app.iml
-app/build.gradle
-app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt
-app/build/outputs/logs/manifest-merger-debug-report.txt
-local.properties
-RegardeCommeIlFaitBeau.iml
-*.iml
-*.iml

@@ -1,16 +1,14 @@
-package com.isen.regardecommeilfaitbeau.ui;
+package com.isen.regardecommeilfaitbeau;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.isen.regardecommeilfaitbeau.R;
-
-public class WeatherActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_weather);
+        setContentView(R.layout.activity_main);
     }
 }
