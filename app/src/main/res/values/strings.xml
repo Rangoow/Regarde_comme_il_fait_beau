@@ -12,4 +12,10 @@
     <string name="appwidget_text">Y fé bo</string>
     <string name="add_widget">Add widget</string>
     <string name="configure">Configure</string>
+    <string name="minTemp">0</string>
+    <string name="minTempTxt">Temperature Min :</string>
+    <string name="maxTemp">35</string>
+    <string name="maxTempTxt">Temperature Max :</string>
+    <string name="raintext">Rain probability :</string>
+    <string name="rainingchance">15</string>
 </resources>
