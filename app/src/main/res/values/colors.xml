@@ -6,7 +6,7 @@
     <color name="bckgroundColor">#D22196F3</color>
     <color name="detailsBckgroundColor">#3078AF</color>
     <color name="forecastBckgroundColor">#59A3F0</color>
-    <color name="colorPrimary">#135685</color>
+    <color name="colorPrimary">#0E4164</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <!-- Array of colors that will be used by ViewPager as background colors -->

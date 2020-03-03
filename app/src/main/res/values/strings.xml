@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">Regarde Comme Il Fait Beau</string>
+
     <string name="temperatureTxt">20</string>
     <string name="temperatureUnitTxt">°C</string>
     <string name="cityTxt">Lille</string>
     <string name="weatherDesc">Sunny</string>
     <string name="cityInputHint">Enter your city</string>
+
+
     <string name="iconWeatherDesc">weather icon</string>
     <string name="dateTxt">Thursday 2 December</string>
     <string name="temperatureMax">20°C</string>
@@ -19,4 +22,13 @@
     <string name="sunriseTxt">Sunrise</string>
     <string name="sunsetValueTxt">07:49</string>
     <string name="sunriseValueTxt">18:14</string>
+
+
+    <string name="forecastMondayTxt">Monday</string>
+    <string name="forecastTuesdayTxt">Tuesday</string>
+    <string name="forecastWednesdayTxt">Wednesday</string>
+    <string name="forecastThursdayTxt">Thursday</string>
+    <string name="forecastFridayTxt">Friday</string>
+    <string name="forecastSaturdayTxt">Saturday</string>
+    <string name="forecastSundayTxt">Sunday</string>
 </resources>
