@@ -89,8 +89,7 @@
         app:backgroundTint="@color/btnColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cityInput_id"
-        app:srcCompat="@drawable/ic_refresh" />
+        app:layout_constraintStart_toEndOf="@+id/cityInput_id" />
 
     <TextView
         android:id="@+id/tempUnit_id"

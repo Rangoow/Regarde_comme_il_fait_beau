@@ -59,7 +59,7 @@ public class WeatherWidgetConfigureActivity extends Activity {
         if (titleValue != null) {
             return titleValue;
         } else {
-            return context.getString(R.string.appwidget_text);
+            return "";//context.getString(R.string.appwidget_text);
         }
     }
 

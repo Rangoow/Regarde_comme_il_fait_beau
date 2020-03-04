@@ -27,7 +27,6 @@
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/MinTempTxt"
         android:textColor="#ffffff"
-        android:text="@string/minTemp"
         android:textSize="12sp" />
 
     <TextView
@@ -38,7 +37,6 @@
         android:layout_alignStart="@+id/RainText"
         android:layout_marginStart="-2dp"
         android:layout_marginTop="10dp"
-        android:text="@string/minTempTxt"
         android:textColor="#ffffff"
         android:textSize="12sp" />
 
@@ -63,7 +61,6 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="21dp"
         android:layout_toEndOf="@+id/city"
-        android:text="@string/raintext"
         android:textColor="#ffffff"
         android:textSize="12sp" />
 
@@ -76,7 +73,6 @@
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/MaxTempTxt"
         android:textColor="#ffffff"
-        android:text="@string/maxTemp"
         android:textSize="12sp" />
 
     <TextView
@@ -88,7 +84,6 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/RainText"
-        android:text="@string/minTemp"
         android:textSize="12sp" />
 
     <ImageView
@@ -130,7 +125,6 @@
         android:layout_marginTop="1dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:contentDescription="@string/appwidget_text"
         android:text="@string/weatherDesc"
         android:textColor="#ffffff"
         android:textSize="24sp"
@@ -145,7 +139,6 @@
         android:layout_marginStart="2dp"
         android:textColor="#ffffff"
         android:layout_marginTop="9dp"
-        android:text="@string/maxTempTxt"
         android:textSize="12sp" />
 
 
