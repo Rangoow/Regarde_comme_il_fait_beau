@@ -5,11 +5,17 @@ import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import androidx.annotation.RequiresApi;
+
 import com.isen.regardecommeilfaitbeau.R;
+import com.isen.regardecommeilfaitbeau.exception.NumberHoursOfDayException;
+
+import org.json.JSONException;
 
 /**
  * The configuration screen for the {@link WeatherWidget WeatherWidget} AppWidget.
@@ -21,6 +27,7 @@ public class WeatherWidgetConfigureActivity extends Activity {
     int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
     EditText mAppWidgetText;
     View.OnClickListener mOnClickListener = new View.OnClickListener() {
+        @RequiresApi(api = Build.VERSION_CODES.O)
         public void onClick(View v) {
             final Context context = WeatherWidgetConfigureActivity.this;
 
@@ -30,7 +37,14 @@ public class WeatherWidgetConfigureActivity extends Activity {
 
             // It is the responsibility of the configuration activity to update the app widget
             AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
-            WeatherWidget.updateAppWidget(context, appWidgetManager, mAppWidgetId);
+            try {
+                WeatherWidget.updateAppWidget(context, appWidgetManager, mAppWidgetId);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (NumberHoursOfDayException f) {
+                f.printStackTrace();
+            }
+
 
             // Make sure we pass back the original appWidgetId
             Intent resultValue = new Intent();
