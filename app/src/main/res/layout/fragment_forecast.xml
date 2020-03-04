@@ -26,22 +26,25 @@
 
         <TextView
             android:id="@+id/id_date_day_1"
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="4dp"
+            android:fontFamily="@font/blogger"
             android:text="@string/forecastMondayTxt"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:textStyle="bold|italic"
             app:layout_constraintStart_toEndOf="@+id/id_ico_weather_day_1"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/id_weather_desc_day_1"
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginBottom="4dp"
+            android:fontFamily="@font/blogger"
             android:text="@string/weatherDesc"
             android:textColor="@color/white"
             android:textSize="16dp"
@@ -53,11 +56,12 @@
             android:id="@+id/id_temp_max_day_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="32dp"
             android:layout_marginEnd="24dp"
+            android:fontFamily="@font/blogger"
             android:text="@string/temperatureMax"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/id_temp_min_day_1"
@@ -69,13 +73,454 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
+            android:fontFamily="@font/blogger"
             android:text="@string/temperatureMin"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/id_container_day_2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="22dp"
+        android:background="@color/colorPrimary">
+
+
+        <ImageView
+            android:id="@+id/id_ico_weather_day_2"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_wi_day_sunny"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/id_date_day_2"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/forecastTuesdayTxt"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toEndOf="@+id/id_ico_weather_day_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_weather_desc_day_2"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/weatherDesc"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/id_date_day_2"
+            app:layout_constraintStart_toEndOf="@+id/id_ico_weather_day_2" />
+
+        <TextView
+            android:id="@+id/id_temp_max_day_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/temperatureMax"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/id_temp_min_day_2"
+            app:layout_constraintStart_toEndOf="@+id/id_date_day_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_temp_min_day_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/temperatureMin"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/id_container_day_3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="22dp"
+        android:background="@color/colorPrimary">
+
+
+        <ImageView
+            android:id="@+id/id_ico_weather_day_3"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_wi_day_sunny"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/id_date_day_3"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/forecastWednesdayTxt"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toEndOf="@+id/id_ico_weather_day_3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_weather_desc_day_3"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/weatherDesc"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/id_date_day_3"
+            app:layout_constraintStart_toEndOf="@+id/id_ico_weather_day_3" />
+
+        <TextView
+            android:id="@+id/id_temp_max_day_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/temperatureMax"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/id_temp_min_day_3"
+            app:layout_constraintStart_toEndOf="@+id/id_date_day_3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_temp_min_day_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/temperatureMin"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/id_container_day_4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="22dp"
+        android:background="@color/colorPrimary">
+
+
+        <ImageView
+            android:id="@+id/id_ico_weather_day_4"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_wi_day_sunny"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/id_date_day_4"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/forecastThursdayTxt"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toEndOf="@+id/id_ico_weather_day_4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_weather_desc_day_4"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/weatherDesc"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/id_date_day_4"
+            app:layout_constraintStart_toEndOf="@+id/id_ico_weather_day_4" />
+
+        <TextView
+            android:id="@+id/id_temp_max_day_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/temperatureMax"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/id_temp_min_day_4"
+            app:layout_constraintStart_toEndOf="@+id/id_date_day_4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_temp_min_day_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/temperatureMin"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/id_container_day_5"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="22dp"
+        android:background="@color/colorPrimary">
+
+
+        <ImageView
+            android:id="@+id/id_ico_weather_day_5"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_wi_day_sunny"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/id_date_day_5"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/forecastFridayTxt"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toEndOf="@+id/id_ico_weather_day_5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_weather_desc_day_5"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/weatherDesc"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/id_date_day_5"
+            app:layout_constraintStart_toEndOf="@+id/id_ico_weather_day_5" />
+
+        <TextView
+            android:id="@+id/id_temp_max_day_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/temperatureMax"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/id_temp_min_day_5"
+            app:layout_constraintStart_toEndOf="@+id/id_date_day_5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_temp_min_day_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/temperatureMin"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/id_container_day_6"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="22dp"
+        android:background="@color/colorPrimary">
+
+
+        <ImageView
+            android:id="@+id/id_ico_weather_day_6"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_wi_day_sunny"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/id_date_day_6"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/forecastSaturdayTxt"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toEndOf="@+id/id_ico_weather_day_6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_weather_desc_day_6"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/weatherDesc"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/id_date_day_6"
+            app:layout_constraintStart_toEndOf="@+id/id_ico_weather_day_6" />
+
+        <TextView
+            android:id="@+id/id_temp_max_day_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/temperatureMax"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/id_temp_min_day_6"
+            app:layout_constraintStart_toEndOf="@+id/id_date_day_6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_temp_min_day_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/temperatureMin"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/id_container_day_7"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="22dp"
+        android:background="@color/colorPrimary">
+
+
+        <ImageView
+            android:id="@+id/id_ico_weather_day_7"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_wi_day_sunny"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/id_date_day_7"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/forecastSundayTxt"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toEndOf="@+id/id_ico_weather_day_7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_weather_desc_day_7"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/weatherDesc"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/id_date_day_7"
+            app:layout_constraintStart_toEndOf="@+id/id_ico_weather_day_7" />
+
+        <TextView
+            android:id="@+id/id_temp_max_day_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/temperatureMax"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/id_temp_min_day_7"
+            app:layout_constraintStart_toEndOf="@+id/id_date_day_7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_temp_min_day_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/blogger"
+            android:text="@string/temperatureMin"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
 </LinearLayout>
