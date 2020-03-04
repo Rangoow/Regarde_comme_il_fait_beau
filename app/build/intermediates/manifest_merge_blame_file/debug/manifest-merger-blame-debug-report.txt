@@ -6,79 +6,79 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="22"
-8-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml
+8-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml
+9-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:5:5-35:19
+11-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:5:5-35:19
 12        android:name="com.isen.regardecommeilfaitbeau.RegardeCommeIlFaitBeauApplication"
-12-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:6:9-58
+12-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:6:9-58
 13        android:allowBackup="true"
-13-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:7:9-35
+13-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:7:9-35
 14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-14-->[androidx.core:core:1.1.0] C:\Users\flore\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
+14-->[androidx.core:core:1.1.0] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:24:18-86
 15        android:debuggable="true"
 16        android:icon="@mipmap/ic_launcher"
-16-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:8:9-43
+16-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:8:9-43
 17        android:label="@string/app_name"
-17-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:9:9-41
+17-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:9:9-41
 18        android:roundIcon="@mipmap/ic_launcher_round"
-18-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:10:9-54
+18-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:10:9-54
 19        android:supportsRtl="true"
-19-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:11:9-35
+19-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:11:9-35
 20        android:testOnly="true"
 21        android:theme="@style/AppTheme" >
-21-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:12:9-40
+21-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:12:9-40
 22        <receiver android:name="com.isen.regardecommeilfaitbeau.widget.WeatherWidget" >
-22-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:13:9-21:20
-22-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:13:19-55
+22-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:13:9-21:20
+22-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:13:19-55
 23            <intent-filter>
-23-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:14:13-16:29
+23-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:14:13-16:29
 24                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-24-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:15:17-84
-24-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:15:25-81
+24-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:15:17-84
+24-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:15:25-81
 25            </intent-filter>
 26
 27            <meta-data
-27-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:18:13-20:63
+27-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:18:13-20:63
 28                android:name="android.appwidget.provider"
-28-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:19:17-58
+28-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:19:17-58
 29                android:resource="@xml/weather_widget_info" />
-29-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:20:17-60
+29-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:20:17-60
 30        </receiver>
 31
 32        <activity android:name="com.isen.regardecommeilfaitbeau.widget.WeatherWidgetConfigureActivity" >
-32-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:23:9-27:20
-32-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:23:19-72
+32-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:23:9-27:20
+32-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:23:19-72
 33            <intent-filter>
-33-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:24:13-26:29
+33-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:24:13-26:29
 34                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
-34-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:25:17-87
-34-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:25:25-84
+34-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:25:17-87
+34-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:25:25-84
 35            </intent-filter>
 36        </activity>
 37        <activity android:name="com.isen.regardecommeilfaitbeau.MainActivity" >
-37-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:28:9-34:20
-37-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:28:19-47
+37-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:28:9-34:20
+37-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:28:19-47
 38            <intent-filter>
-38-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:29:13-33:29
+38-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:29:13-33:29
 39                <action android:name="android.intent.action.MAIN" />
-39-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:30:17-69
-39-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:30:25-66
+39-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:30:17-69
+39-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:30:25-66
 40
 41                <category android:name="android.intent.category.LAUNCHER" />
-41-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:32:17-77
-41-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:32:27-74
+41-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:32:17-77
+41-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:32:27-74
 42            </intent-filter>
 43        </activity>
 44
 45        <service
-45-->[androidx.room:room-runtime:2.2.4] C:\Users\flore\.gradle\caches\transforms-2\files-2.1\11f4c3c7c12bfb2d178ad7664c295997\room-runtime-2.2.4\AndroidManifest.xml:25:9-27:40
+45-->[androidx.room:room-runtime:2.2.4] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/11f4c3c7c12bfb2d178ad7664c295997/room-runtime-2.2.4/AndroidManifest.xml:25:9-27:40
 46            android:name="androidx.room.MultiInstanceInvalidationService"
-46-->[androidx.room:room-runtime:2.2.4] C:\Users\flore\.gradle\caches\transforms-2\files-2.1\11f4c3c7c12bfb2d178ad7664c295997\room-runtime-2.2.4\AndroidManifest.xml:26:13-74
+46-->[androidx.room:room-runtime:2.2.4] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/11f4c3c7c12bfb2d178ad7664c295997/room-runtime-2.2.4/AndroidManifest.xml:26:13-74
 47            android:exported="false" />
-47-->[androidx.room:room-runtime:2.2.4] C:\Users\flore\.gradle\caches\transforms-2\files-2.1\11f4c3c7c12bfb2d178ad7664c295997\room-runtime-2.2.4\AndroidManifest.xml:27:13-37
+47-->[androidx.room:room-runtime:2.2.4] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/11f4c3c7c12bfb2d178ad7664c295997/room-runtime-2.2.4/AndroidManifest.xml:27:13-37
 48    </application>
 49
 50</manifest>
