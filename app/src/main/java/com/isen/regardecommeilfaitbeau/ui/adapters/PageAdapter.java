@@ -21,9 +21,9 @@ public class PageAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch(position){
             case 0:
-                return(DetailsFragment.newInstance());
-            case 1:
                 return(TodayWeatherFragment.newInstance());
+            case 1:
+                return(DetailsFragment.newInstance());
             case 2:
                 return(ForecastFragment.newInstance());
             default:
@@ -40,9 +40,9 @@ public class PageAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch(position){
             case 0:
-                return "Details";
-            case 1:
                 return "Today";
+            case 1:
+                return "Details";
             case 2:
                 return "Forecast";
             default:

@@ -31,4 +31,5 @@
     <string name="forecastFridayTxt">Friday</string>
     <string name="forecastSaturdayTxt">Saturday</string>
     <string name="forecastSundayTxt">Sunday</string>
+    <string name="todo">TODO</string>
 </resources>

@@ -38,11 +38,12 @@
             android:layout_height="wrap_content" />
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/tpdayTan"
+            android:id="@+id/todayTabItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/ForecastTabItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </com.google.android.material.tabs.TabLayout>
