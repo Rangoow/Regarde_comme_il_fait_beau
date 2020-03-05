@@ -6,79 +6,94 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="22"
-8-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml
+8-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml
+9-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml
 10
-11    <application
-11-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:5:5-35:19
-12        android:name="com.isen.regardecommeilfaitbeau.RegardeCommeIlFaitBeauApplication"
-12-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:6:9-58
-13        android:allowBackup="true"
-13-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:7:9-35
-14        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-14-->[androidx.core:core:1.1.0] C:\Users\flore\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
-15        android:debuggable="true"
-16        android:icon="@mipmap/ic_launcher"
-16-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:8:9-43
-17        android:label="@string/app_name"
-17-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:9:9-41
-18        android:roundIcon="@mipmap/ic_launcher_round"
-18-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:10:9-54
-19        android:supportsRtl="true"
-19-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:11:9-35
-20        android:testOnly="true"
-21        android:theme="@style/AppTheme" >
-21-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:12:9-40
-22        <receiver android:name="com.isen.regardecommeilfaitbeau.widget.WeatherWidget" >
-22-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:13:9-21:20
-22-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:13:19-55
-23            <intent-filter>
-23-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:14:13-16:29
-24                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-24-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:15:17-84
-24-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:15:25-81
-25            </intent-filter>
-26
-27            <meta-data
-27-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:18:13-20:63
-28                android:name="android.appwidget.provider"
-28-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:19:17-58
-29                android:resource="@xml/weather_widget_info" />
-29-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:20:17-60
-30        </receiver>
-31
-32        <activity android:name="com.isen.regardecommeilfaitbeau.widget.WeatherWidgetConfigureActivity" >
-32-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:23:9-27:20
-32-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:23:19-72
-33            <intent-filter>
-33-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:24:13-26:29
-34                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
-34-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:25:17-87
-34-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:25:25-84
-35            </intent-filter>
-36        </activity>
-37        <activity android:name="com.isen.regardecommeilfaitbeau.MainActivity" >
-37-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:28:9-34:20
-37-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:28:19-47
-38            <intent-filter>
-38-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:29:13-33:29
-39                <action android:name="android.intent.action.MAIN" />
-39-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:30:17-69
-39-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:30:25-66
-40
-41                <category android:name="android.intent.category.LAUNCHER" />
-41-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:32:17-77
-41-->C:\Users\flore\Documents\GitHub\Regarde_comme_il_fait_beau\app\src\main\AndroidManifest.xml:32:27-74
-42            </intent-filter>
-43        </activity>
-44
-45        <service
-45-->[androidx.room:room-runtime:2.2.4] C:\Users\flore\.gradle\caches\transforms-2\files-2.1\11f4c3c7c12bfb2d178ad7664c295997\room-runtime-2.2.4\AndroidManifest.xml:25:9-27:40
-46            android:name="androidx.room.MultiInstanceInvalidationService"
-46-->[androidx.room:room-runtime:2.2.4] C:\Users\flore\.gradle\caches\transforms-2\files-2.1\11f4c3c7c12bfb2d178ad7664c295997\room-runtime-2.2.4\AndroidManifest.xml:26:13-74
-47            android:exported="false" />
-47-->[androidx.room:room-runtime:2.2.4] C:\Users\flore\.gradle\caches\transforms-2\files-2.1\11f4c3c7c12bfb2d178ad7664c295997\room-runtime-2.2.4\AndroidManifest.xml:27:13-37
-48    </application>
-49
-50</manifest>
+11    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+11-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:4:5-80
+11-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:4:22-78
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:6:5-78
+12-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:8:5-80
+13-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:8:22-78
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:10:5-66
+14-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:10:22-64
+15
+16    <application
+16-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:12:5-28:19
+17        android:name="com.isen.regardecommeilfaitbeau.RegardeCommeIlFaitBeauApplication"
+17-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:13:9-58
+18        android:allowBackup="true"
+18-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:14:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.1.0] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/AndroidManifest.xml:24:18-86
+20        android:debuggable="true"
+21        android:icon="@mipmap/ic_launcher"
+21-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:15:9-43
+22        android:label="@string/app_name"
+22-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:16:9-41
+23        android:roundIcon="@mipmap/ic_launcher_round"
+23-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:17:9-54
+24        android:supportsRtl="true"
+24-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:18:9-35
+25        android:testOnly="true"
+26        android:theme="@style/AppTheme" >
+26-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:19:9-40
+27        <activity android:name="com.isen.regardecommeilfaitbeau.MainActivity" >
+27-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:21:9-27:20
+27-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:21:19-47
+28            <intent-filter>
+28-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:22:13-26:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:23:17-69
+29-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:23:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:25:17-77
+31-->/Users/louis-clementlangue/Library/Mobile Documents/com~apple~CloudDocs/Cours/M1/Regarde_comme_il_fait_beau/app/src/main/AndroidManifest.xml:25:27-74
+32            </intent-filter>
+33        </activity>
+34        <activity
+34-->[com.karumi:dexter:5.0.0] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/154fa51f4bab2d49c30250bbf3381de4/jetified-dexter-5.0.0/AndroidManifest.xml:27:9-29:72
+35            android:name="com.karumi.dexter.DexterActivity"
+35-->[com.karumi:dexter:5.0.0] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/154fa51f4bab2d49c30250bbf3381de4/jetified-dexter-5.0.0/AndroidManifest.xml:28:13-60
+36            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+36-->[com.karumi:dexter:5.0.0] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/154fa51f4bab2d49c30250bbf3381de4/jetified-dexter-5.0.0/AndroidManifest.xml:29:13-69
+37        <activity
+37-->[com.google.android.gms:play-services-base:11.8.0] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/f678d108ad70b175b1d9904d7903c396/jetified-play-services-base-11.8.0/AndroidManifest.xml:23:9-26:75
+38            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+38-->[com.google.android.gms:play-services-base:11.8.0] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/f678d108ad70b175b1d9904d7903c396/jetified-play-services-base-11.8.0/AndroidManifest.xml:24:13-79
+39            android:exported="false"
+39-->[com.google.android.gms:play-services-base:11.8.0] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/f678d108ad70b175b1d9904d7903c396/jetified-play-services-base-11.8.0/AndroidManifest.xml:25:13-37
+40            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+40-->[com.google.android.gms:play-services-base:11.8.0] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/f678d108ad70b175b1d9904d7903c396/jetified-play-services-base-11.8.0/AndroidManifest.xml:26:13-72
+41
+42        <meta-data
+42-->[com.google.android.gms:play-services-basement:11.8.0] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/33ddfb4c5ab8c794499126a0890ccf21/jetified-play-services-basement-11.8.0/AndroidManifest.xml:23:9-25:69
+43            android:name="com.google.android.gms.version"
+43-->[com.google.android.gms:play-services-basement:11.8.0] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/33ddfb4c5ab8c794499126a0890ccf21/jetified-play-services-basement-11.8.0/AndroidManifest.xml:24:13-58
+44            android:value="@integer/google_play_services_version" />
+44-->[com.google.android.gms:play-services-basement:11.8.0] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/33ddfb4c5ab8c794499126a0890ccf21/jetified-play-services-basement-11.8.0/AndroidManifest.xml:25:13-66
+45
+46        <provider
+46-->[com.squareup.picasso:picasso:2.71828] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/8af7a3dff56072947d12411af1f2bb6b/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+47            android:name="com.squareup.picasso.PicassoProvider"
+47-->[com.squareup.picasso:picasso:2.71828] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/8af7a3dff56072947d12411af1f2bb6b/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+48            android:authorities="com.isen.regardecommeilfaitbeau.com.squareup.picasso"
+48-->[com.squareup.picasso:picasso:2.71828] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/8af7a3dff56072947d12411af1f2bb6b/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+49            android:exported="false" />
+49-->[com.squareup.picasso:picasso:2.71828] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/8af7a3dff56072947d12411af1f2bb6b/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+50
+51        <service
+51-->[androidx.room:room-runtime:2.2.4] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/11f4c3c7c12bfb2d178ad7664c295997/room-runtime-2.2.4/AndroidManifest.xml:25:9-27:40
+52            android:name="androidx.room.MultiInstanceInvalidationService"
+52-->[androidx.room:room-runtime:2.2.4] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/11f4c3c7c12bfb2d178ad7664c295997/room-runtime-2.2.4/AndroidManifest.xml:26:13-74
+53            android:exported="false" />
+53-->[androidx.room:room-runtime:2.2.4] /Users/louis-clementlangue/.gradle/caches/transforms-2/files-2.1/11f4c3c7c12bfb2d178ad7664c295997/room-runtime-2.2.4/AndroidManifest.xml:27:13-37
+54    </application>
+55
+56</manifest>
