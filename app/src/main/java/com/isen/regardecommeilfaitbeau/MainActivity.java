@@ -34,6 +34,7 @@ import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -126,17 +127,11 @@ public class MainActivity extends AppCompatActivity {
                             DetailsFragment.date_id.setText(formatted);
                             String descr=main_object.getString("icon");
                             //today
-                            /*Resources res0 = getResources();
-                            String mDrawableName0 = descr;
-                            int resID0 = res0.getIdentifier(mDrawableName0 , "drawable", getPackageName());
-                            Drawable drawable0 = res0.getDrawable(resID0 );
-                            today_weatherFragment.weatherDescriptionIcon_id.setImageDrawable(drawable0 );
+                            Picasso.get().load(new StringBuilder("https://darksky.net/images/weather-icons/").append(descr)
+                            .append(".png").toString()).into(today_weatherFragment.weatherDescriptionIcon_id);
                             //detail
-                            Resources res = getResources();
-                            String mDrawableName = descr;
-                            int resID = res.getIdentifier(mDrawableName , "drawable", getPackageName());
-                            Drawable drawable = res.getDrawable(resID );
-                            DetailsFragment.weatherDescriptionIcon_id.setImageDrawable(drawable );*/
+                            Picasso.get().load(new StringBuilder("https://darksky.net/images/weather-icons/").append(descr)
+                                    .append(".png").toString()).into(DetailsFragment.weatherDescriptionIcon_id);
                             JSONObject mains_object=response.getJSONObject("daily");
                             JSONArray jArray = mains_object.getJSONArray("data");
                             for (int i=0; i < mains_object.length(); i++)
